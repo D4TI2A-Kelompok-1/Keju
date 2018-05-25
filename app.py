@@ -13,3 +13,10 @@ def show_post(post_id):
 @app.route('/crot', methods=['POST'])
 def login():
 	return request.form['anu']
+
+
+@app.route("/", methods=['POST', 'GET'])
+def hello():
+    # return "Hello World!"
+	hasil = request.json["nama"]
+	return hasil
