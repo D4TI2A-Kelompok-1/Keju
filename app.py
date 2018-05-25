@@ -18,5 +18,5 @@ def login():
 @app.route("/", methods=['POST', 'GET'])
 def hello():
     # return "Hello World!"
-	hasil = request.json["nama"]
+	hasil = request.json["nama_orang"]
 	return hasil
