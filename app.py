@@ -1,4 +1,4 @@
-from flask import Flask,request
+from flask import Flask,request,jsonify
 app = Flask(__name__)
 
 @app.route('/<gurih>')
@@ -15,8 +15,16 @@ def login():
 	return request.form['anu']
 
 
-@app.route("/", methods=['POST', 'GET'])
-def hello():
-    # return "Hello World!"
-	hasil = request.json["nama_orang"]
-	return hasil
+@app.route("/input/nama")
+def nama():
+    nama = [
+        {
+            'nama_depan':'ema',
+            'nama_belakang':'ainun'
+        },
+        {
+            'nama_depan':'riandaka',
+            'nama_belakang':'rizal'
+        }
+    ]
+    return jsonify({'daftar nama':'nama'})
