@@ -25,6 +25,10 @@ def nama():
         {
             'nama_depan':'riandaka',
             'nama_belakang':'rizal'
+        },
+        {
+            'nama_depan':'naufal',
+            'nama_belakang':'ramadhan'
         }
     ]
-    return jsonify({'daftar nama':'nama'})
+    return jsonify({'daftar nama':nama})
